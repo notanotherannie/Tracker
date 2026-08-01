@@ -4,7 +4,7 @@ A single-file countdown tracker for a fixed-deadline work sprint. One HTML file,
 
 Dead reckoning is navigation by known speed and elapsed time with no landmarks to check against. That is more or less what a seven-week run at an immovable date feels like.
 
-Live: `[https://<username>.github.io/<repo>/](https://notanotherannie.github.io/Tracker/)`
+Live: `(https://notanotherannie.github.io/Tracker/)`
 
 ---
 
