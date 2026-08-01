@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DEAD RECKONING</title>
+<title>Dead Reckoning</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D12'/><g fill='none' stroke='%2393CBE2' stroke-width='2.6' stroke-linecap='square'><circle cx='16' cy='19' r='9'/><path d='M12 4h8M16 4v3M16 19l5-4'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,6 +289,8 @@ textarea{width:100%;margin-top:14px;resize:vertical;min-height:44px;color:var(--
       <button class="btn" id="iJ">IMPORT JSON</button>
       <button class="btn" id="eM">EXPORT MD</button>
       <button class="btn" id="rs">RESET</button>
+      <button class="btn" id="sy">SYNC SETUP</button>
+      <button class="btn" id="sn">SYNC NOW</button>
       <input type="file" id="fi" accept=".json" hidden>
     </div>
   </div>
@@ -749,14 +751,14 @@ E.eM.onclick=()=>{const st=stat();
 E.iJ.onclick=()=>E.fi.click();
 E.fi.onchange=()=>{const f=E.fi.files[0];if(!f)return;const r=new FileReader();
   r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.tracks)throw 0;
-    S=Object.assign({tab:"work",log:[],open:{},co:{},copen:{}},d);
+    S=hydrate(d);
     note("IMPORTED SAVE FILE");save();render();tab(S.tab)}
   catch(err){alert("FILE NOT READABLE AS TRACKER DATA")}};
   r.readAsText(f);E.fi.value=""};
 E.rs.onclick=()=>{if(!confirm("RESET EVERYTHING? ALL EDITS LOST."))return;
   S=SEED();note("RESET TO SEED");save();render();tab("work")};
 
-E.sy.onclick=async()=>{
+if(E.sy)E.sy.onclick=async()=>{
   const c=cfg();
   const t=prompt("GITHUB TOKEN — fine-grained, Gists: read+write.\nStored on this device only.",c.token||"");
   if(t===null)return;
@@ -765,7 +767,7 @@ E.sy.onclick=async()=>{
   setCfg({token:t.trim(),gist:g.trim()});
   if(!g.trim()){await makeGist()}else{await refresh()}
 };
-E.sn.onclick=()=>refresh();
+if(E.sn)E.sn.onclick=()=>refresh();
 
 clock();render();tab(S.tab||"work");
 refresh();
