@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>49 DAYS</title>
+<title>DEAD RECKONING</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070D12'/><g fill='none' stroke='%2393CBE2' stroke-width='2.6' stroke-linecap='square'><circle cx='16' cy='19' r='9'/><path d='M12 4h8M16 4v3M16 19l5-4'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&family=Silkscreen&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -227,10 +228,11 @@ textarea{width:100%;margin-top:14px;resize:vertical;min-height:44px;color:var(--
   <span>TASKS <b id="sT">--</b></span>
   <span>OVERDUE <b id="sO">--</b></span>
   <span>APPS <b id="sA">--</b></span>
+  <span>SYNC <b id="sS">--</b></span>
 </div>
 
 <div class="mast">
-  <div class="ttl">RUNTIME<u>FORTY-NINE DAYS</u>01.AUG.26 &gt; 18.SEP.26</div>
+  <div class="ttl">DEAD RECKONING<u>FORTY-NINE DAYS</u>01.AUG.26 &gt; 18.SEP.26</div>
   <div class="cnt">
     <div><div class="num" id="cD">--</div><div class="u">DAYS REMAIN</div></div>
     <div><div class="sm" id="cP">--</div><div class="u">DONE</div></div>
@@ -292,14 +294,14 @@ textarea{width:100%;margin-top:14px;resize:vertical;min-height:44px;color:var(--
   </div>
 </div>
 
-<div class="ft">LOCAL STORAGE ONLY &mdash; EXPORT OFTEN</div>
+<div class="ft">SYNCED VIA SECRET GIST &mdash; EXPORT OFTEN</div>
 </div>
 
 <script>
 const START="2026-08-01",END="2026-09-18",KEY="term49b";
 const $=i=>document.getElementById(i);
 const E={};["fDate","fTime","sD","sW","sT","sO","sA","cD","cP","cO","pbar","sMid","map","mapNote",
-"stNote","strands","newTrack","addTrack","coBody","coNote","reqs","log","lgNote","eJ","iJ","eM","rs","fi"]
+"stNote","strands","newTrack","addTrack","coBody","coNote","reqs","log","lgNote","eJ","iJ","eM","rs","fi","sS","sy","sn"]
 .forEach(k=>E[k]=$(k));
 
 const COLLEGES=[{"id":"u0","tier":"S","uni":"MIT","prog":"MS in Media Arts & Sciences (HCI / design track)","dept":"MIT Media Lab (School of Architecture + Planning)","country":"USA","dur":"2 years","tui":"Fully funded (tuition + stipend + medical)","live":"Covered by stipend (~$25k+/yr, Cambridge MA)","tot":"≈ $0 net — all admitted students fully funded","opens":"Sep 15","closes":"Dec 15","iso":"2026-12-15","approx":false,"fee":"₹7,192.05","schol":"Full funding guaranteed for all admits (tuition, stipend, insurance)","docs":"Statement of objectives, 3 LORs, transcripts, portfolio, CV","port":"Required","ielts":"7","toefl":"100","gre":"Not required","work":"Not required (research / creative track record valued)","intern":"Yes — industry consortium & research assistantships","res":"Tangible & wearable interfaces, affective computing, HCI, civic/learning tech","visa":"F-1 OPT 12 mo + 24 mo STEM ext (MAS is STEM)","link":"https://www.media.mit.edu/apply/"},{"id":"u1","tier":"S","uni":"Stanford d.school","prog":"MS Design","dept":"Computer Science (Stanford HCI Group)","country":"USA","dur":"1–2 years","tui":"≈ $62,000/yr full load (varies by units taken)","live":"≈ $30,000/yr (Bay Area)","tot":"≈ $90k–130k depending on pace","opens":"Sep","closes":"early Dec (~Dec 2)","iso":"2026-12-02","approx":true,"fee":"₹11,986.75","schol":"Limited — some fellowships; RA-ships rare for MS students","docs":"SOP, 3 LORs, transcripts, resume","port":"Required","ielts":"—","toefl":"89+","gre":"Not required (currently)","work":"Not required","intern":"Yes — CPT; Silicon Valley proximity","res":"Interaction design, design methods, crowdsourcing, HCI + AI","visa":"F-1 OPT 12 mo + 24 mo STEM ext","link":"https://www.cs.stanford.edu/masters-specializations"},{"id":"u2","tier":"S","uni":"UC Berkeley","prog":"Master of Information Management & Systems (MIMS)","dept":"School of Information (I School)","country":"USA","dur":"2 years","tui":"≈ $40,000+/yr (non-resident; ≈ $80k total)","live":"≈ $28,000/yr (Berkeley)","tot":"≈ $130k+ total","opens":"Sep","closes":"early–mid Dec","iso":"2026-12-10","approx":true,"fee":"₹14,863.57","schol":"Merit-based partial awards; some fellowships","docs":"SOP + personal history statement, 3 LORs, transcripts, resume","port":"Not required to apply (graduate with a pro portfolio)","ielts":"7","toefl":"90","gre":"Not required","work":"Valued but not required","intern":"Yes — summer internship expected between years","res":"UX/HCI, information systems, data, design, policy","visa":"F-1 OPT 12 mo + 24 mo STEM ext (MIMS is STEM)","link":"https://www.ischool.berkeley.edu/programs/mims"},{"id":"u3","tier":"S","uni":"University of Washington","prog":"Master of HCI + Design (MHCI+D)","dept":"Interdisciplinary — DUB (iSchool, HCDE, CSE, Design)","country":"USA","dur":"≈ 11 months (1 yr)","tui":"≈ $55,430 (fee-based; same for all students)","live":"≈ $20,000 (Seattle)","tot":"≈ $75,000","opens":"≈ Oct","closes":"Jan 15","iso":"2027-01-15","approx":false,"fee":"₹8,150.99","schol":"Limited — fee-based programme, little internal aid","docs":"Personal statement (500–800w), 3 LORs, transcripts, resume; portfolio optional","port":"Recommended (not required)","ielts":"accepted","toefl":"accepted (~92+)","gre":"Not required","work":"Not required (valued)","intern":"Industry-sponsored studios; intensive 1-yr format","res":"UX, interaction design, prototyping, user research & evaluation","visa":"F-1 OPT 12 mo + 24 mo STEM ext (if STEM-designated)","link":"https://mhcid.uw.edu/"},{"id":"u4","tier":"S","uni":"TU Delft","prog":"MSc Design for Interaction","dept":"Industrial Design Engineering (IDE)","country":"Netherlands","dur":"2 years","tui":"≈ €25,600/yr (2026; up from €22,290 in 2025)","live":"≈ €13,000–15,000/yr","tot":"≈ €78,000 (non-EU, full programme)","opens":"≈ Oct","closes":"Jan 15 (non-EU) / Apr 1 (EU)","iso":"2027-01-15","approx":false,"fee":"₹10,909.10","schol":"Justus & Louise van Effen; Holland Scholarship","docs":"Transcripts, motivation letter, CV, digital portfolio, English test","port":"Required (digital portfolio)","ielts":"6.5 (some list 7.0)","toefl":"90–100","gre":"Not required","work":"Not required","intern":"Yes — graduation internship common","res":"Interaction & experience design, design for behaviour change, user research","visa":"NL Orientation Year (zoekjaar) — 12 mo","link":"https://www.tudelft.nl/en/onderwijs/opleidingen/masters/msc-design-for-interaction/"},{"id":"u5","tier":"S","uni":"NUS","prog":"Master of Computing — CS specialisation (HCI focus); also M.Des (Integrated Design)","dept":"School of Computing (NUS-HCI Lab)","country":"Singapore","dur":"1.5–2 years","tui":"≈ S$50,000–58,000 total (international)","live":"≈ S$12,000–18,000/yr","tot":"≈ S$75,000","opens":"≈ Nov","closes":"varies (competitive)","iso":"","approx":false,"fee":"3,699.07","schol":"Limited graduate scholarships","docs":"Transcripts, SOP, LORs, GRE/GMAT (intl), English test","port":"Not required (MComp); M.Des may require","ielts":"6.5+","toefl":"85–100","gre":"Recommended/required for intl (MComp)","work":"Not required (IT experience helps for some tracks)","intern":"Possible","res":"HCI systems, interaction techniques, HCI + AI (NUS-HCI Lab)","visa":"No dedicated PSW visa — must secure Employment Pass (LTVP up to ~1 yr possible)","link":"https://masters.nus.edu.sg/programmes/master-of-computing/"},{"id":"u6","tier":"A","uni":"Aalto University","prog":"MSc (Tech) Human-Computer Interaction (also HCID design major)","dept":"School of Science — Dept. of Computer Science","country":"Finland","dur":"2 years","tui":"€17,000/yr (non-EU; free for EU/EEA)","live":"≈ €10,000–12,000/yr","tot":"≈ €55,000 (non-EU)","opens":"Dec 1","closes":"Jan 2","iso":"2027-01-02","approx":false,"fee":"₹1,085.71","schol":"Aalto Scholarship (50–100% tuition) + €3,000 grant","docs":"Transcripts, motivation letter, CV","port":"Not required (HCI eng major)","ielts":"6.5","toefl":"92","gre":"Not required","work":"Not required","intern":"Yes","res":"HCI research #1–3 in Europe; computational interaction, UI, XR","visa":"Finland — 2-yr job-search residence permit (within 5 yrs)","link":"https://www.aalto.fi/en/study-options/human-computer-interaction-master-of-science-technology"},{"id":"u7","tier":"A","uni":"Umeå University","prog":"MFA Interaction Design","dept":"Umeå Institute of Design (UID)","country":"Sweden","dur":"2 years","tui":"≈ SEK 321,300 total (non-EU); free for EU/EEA","live":"≈ SEK 130,000/yr","tot":"≈ SEK 452,000+ (non-EU)","opens":"≈ Oct","closes":"mid-Jan (~Jan 15); portfolio ~Feb 2","iso":"2027-01-15","approx":true,"fee":"₹8,832.77","schol":"Umeå Univ. Scholarship; Design by Umeå; tuition reduction (non-EU)","docs":"Transcripts, digital portfolio (PDF), motivation letter, English","port":"Required (heavily weighted in selection)","ielts":"6.5 (English 6)","toefl":"90","gre":"Not required","work":"Not required","intern":"Yes — live industry projects","res":"World-leading IxD; product/service interaction, embodied & speculative design","visa":"Sweden — 12-mo residence permit to seek work","link":"https://www.umu.se/en/umea-institute-of-design/education/programmes/masters-programme-in-interaction-design/"},{"id":"u8","tier":"A","uni":"University of Glasgow","prog":"MSc Human Computer Interaction","dept":"School of Computing Science (GIST group)","country":"UK (Scotland)","dur":"1 year","tui":"≈ £28,000–30,000 (intl — verify)","live":"≈ £12,000–15,000","tot":"≈ £42,000","opens":"≈ Oct","closes":"Rolling — competitive, apply early","iso":"","approx":false,"fee":"None (deposit due after offer)","schol":"University & postgraduate scholarships","docs":"Transcripts, personal statement, references, English","port":"Not required","ielts":"6.5","toefl":"90","gre":"Not required","work":"CS / programming background needed","intern":"Limited / industry projects","res":"GIST — mobile HCI, multimodal interaction, accessibility","visa":"UK Graduate Route — 18 mo (from 1 Jan 2027; 2 yr if applied by 31 Dec 2026)","link":"https://www.gla.ac.uk/postgraduate/taught/humancomputerinteraction/"},{"id":"u9","tier":"A","uni":"University of York","prog":"MSc Human-Centred Interactive Technologies","dept":"Department of Computer Science","country":"UK (England)","dur":"1 year","tui":"£31,900 (intl, 2025/26)","live":"≈ £12,000","tot":"≈ £44,000","opens":"≈ Oct","closes":"Rolling — competitive","iso":"","approx":false,"fee":"None (deposit due after offer)","schol":"Chevening; 10% York alumni Masters discount","docs":"Degree cert/transcript, LOR, CV, personal statement, English","port":"Not required","ielts":"6.5 (min 6.0)","toefl":"87","gre":"Not required","work":"Not required (or equivalent industrial experience)","intern":"Limited","res":"UX research, human factors, games user research","visa":"UK Graduate Route — 18 mo (from 1 Jan 2027)","link":"https://www.york.ac.uk/study/postgraduate-taught/courses/msc-human-centred-interactive-technologies/"},{"id":"u10","tier":"A","uni":"University College Dublin","prog":"MSc Human Computer Interaction","dept":"School of Information & Communication Studies (HCI@UCD / ADAPT)","country":"Ireland","dur":"1 year","tui":"€24,700/yr (non-EU); €9,515 EU","live":"≈ €10,000–13,000","tot":"≈ €37,000 (non-EU)","opens":"≈ Oct","closes":"Rolling — non-EU apply earlier","iso":"","approx":false,"fee":"₹5,428.66","schol":"UCD Global Excellence Graduate Scholarship","docs":"Transcripts, personal statement, LORs, English","port":"Not required (social-science lens)","ielts":"6.5","toefl":"≈ 90","gre":"Not required","work":"Not required (open to any discipline; 2:1 honours)","intern":"Possible","res":"Conversational UX, HCI social science, ADAPT Centre","visa":"Ireland — Third Level Graduate Programme (Stay Back) 24 mo","link":"https://www.ucd.ie/courses/w521"},{"id":"u11","tier":"A","uni":"KTH Royal Institute of Technology","prog":"MSc Interactive Media Technology (ICT Innovation HCID track alt.)","dept":"School of EECS — Media Technology / HCI","country":"Sweden","dur":"2 years","tui":"≈ SEK 310,000 total (non-EU); free EU/EEA","live":"≈ SEK 115,000/yr","tot":"≈ SEK 540,000 (non-EU)","opens":"Oct 16","closes":"Jan 15","iso":"2027-01-15","approx":false,"fee":"₹8,833.96","schol":"KTH Scholarship (tuition); KTH India Scholarship; Swedish Institute","docs":"Transcripts, CV, motivation letter, English","port":"Not required (some tracks value it)","ielts":"6.5","toefl":"90","gre":"Not required","work":"Not required (CS / media / HCI background)","intern":"Yes","res":"Interaction design, media technology, sound & visual media, UX","visa":"Sweden — 12-mo job-search residence permit","link":"https://www.kth.se/en/studies/master/interactive-media-technology/"},{"id":"u12","tier":"A","uni":"Technical University of Munich","prog":"MSc Human Factors Engineering (HMI Design track); Informatics (HCI) alt.","dept":"TUM — interdisciplinary (CIT / Engineering)","country":"Germany","dur":"2 years","tui":"€6,000/semester = €12,000/yr (non-EU, from WS24/25); free EU","live":"≈ €12,000/yr (Munich)","tot":"≈ €48,000 (non-EU)","opens":"≈ Jan (winter intake)","closes":"≈ May 31 (winter intake)","iso":"2027-05-31","approx":true,"fee":"₹8,143.77","schol":"Fee waivers possible; DAAD; Deutschlandstipendium","docs":"VPD (uni-assist), transcripts, CV, motivation, English","port":"Not required (Informatics); HFE may value","ielts":"6.5","toefl":"88","gre":"Not required (may recommend)","work":"Not required","intern":"Yes — strong industry ties","res":"Human-machine interaction, human-centred systems, ergonomics; Informatics HCI","visa":"Germany — 18-mo job-seeking residence permit","link":"https://www.tum.de/en/studies/degree-programs/detail/ergonomics-human-factors-engineering-master-of-science-msc"}];
@@ -410,9 +412,76 @@ const SEED=()=>({tab:"work",log:[],open:{},co:{},copen:{},tracks:[
   ["Reading + notes every third day","2026-09-18"]])}
 ]});
 
-let S=(()=>{try{const r=JSON.parse(localStorage.getItem(KEY));if(r&&r.tracks)
-  return Object.assign({tab:"work",log:[],open:{},co:{},copen:{}},r)}catch(e){}return SEED()})();
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+/* ── storage: local always, secret gist for cross-device ── */
+const CFG=KEY+"_cfg", GF="deadreckoning.json";
+const cfg=()=>{try{return JSON.parse(localStorage.getItem(CFG))||{}}catch(e){return{}}};
+const setCfg=c=>{try{localStorage.setItem(CFG,JSON.stringify(c))}catch(e){}};
+const setSync=s=>{if(E.sS)E.sS.textContent=s};
+const hhmm=()=>new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+const hydrate=d=>Object.assign({tab:"work",log:[],open:{},co:{},copen:{},rev:0},d);
+
+let S=SEED();
+try{const r=JSON.parse(localStorage.getItem(KEY));if(r&&r.tracks)S=hydrate(r)}catch(e){}
+
+const gh=(p,o)=>fetch("https://api.github.com"+p,Object.assign({headers:{
+  Authorization:"Bearer "+cfg().token,Accept:"application/vnd.github+json"}},o||{}));
+
+let pushT=null;
+const save=()=>{
+  S.rev=Date.now();
+  try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+  if(cfg().token&&cfg().gist){clearTimeout(pushT);pushT=setTimeout(pushCloud,1200)}
+};
+
+async function pushCloud(){
+  const c=cfg(); if(!c.token||!c.gist)return;
+  setSync("SAVING");
+  try{
+    const r=await gh("/gists/"+c.gist,{method:"PATCH",
+      body:JSON.stringify({files:{[GF]:{content:JSON.stringify(S)}}})});
+    if(!r.ok)throw 0;
+    setSync(hhmm());
+  }catch(e){setSync("PUSH FAILED")}
+}
+
+async function makeGist(){
+  setSync("CREATING");
+  try{
+    const r=await gh("/gists",{method:"POST",body:JSON.stringify({
+      description:"DEAD RECKONING tracker state",public:false,
+      files:{[GF]:{content:JSON.stringify(S)}}})});
+    if(!r.ok)throw 0;
+    const j=await r.json();
+    setCfg(Object.assign(cfg(),{gist:j.id}));
+    setSync(hhmm());
+    alert("GIST CREATED\n\nID: "+j.id+"\n\nEnter this ID under SYNC SETUP on your other devices.");
+  }catch(e){setSync("CREATE FAILED");alert("Could not create the gist. Check the token has Gists read+write.")}
+}
+
+async function pullCloud(){
+  const c=cfg();
+  if(!c.token){setSync("LOCAL ONLY");return false}
+  if(!c.gist){await makeGist();return false}
+  setSync("LOADING");
+  try{
+    const r=await gh("/gists/"+c.gist);
+    if(!r.ok)throw 0;
+    const j=await r.json(), f=j.files&&j.files[GF];
+    if(!f)throw 0;
+    const txt=f.truncated?await(await fetch(f.raw_url)).text():f.content;
+    const d=JSON.parse(txt);
+    if(d&&d.tracks&&(d.rev||0)>(S.rev||0)){
+      S=hydrate(d);
+      try{localStorage.setItem(KEY,txt)}catch(e){}
+      setSync("PULLED "+hhmm());
+      return true;
+    }
+    if((S.rev||0)>(d.rev||0)){await pushCloud()} else {setSync(hhmm())}
+    return false;
+  }catch(e){setSync("PULL FAILED");return false}
+}
+
+const refresh=()=>pullCloud().then(ch=>{if(ch){render();tab(S.tab||"work")}});
 const note=t=>{S.log.unshift({ts:Date.now(),t});if(S.log.length>500)S.log.length=500};
 
 const D=s=>new Date(s+"T00:00:00");
@@ -667,16 +736,16 @@ E.coBody.addEventListener("blur",e=>{
 
 const dlf=(t,n,m)=>{const a=document.createElement("a");
   a.href=URL.createObjectURL(new Blob([t],{type:m}));a.download=n;a.click()};
-E.eJ.onclick=()=>dlf(JSON.stringify(S,null,2),"49days-"+iso(nowd())+".json","application/json");
+E.eJ.onclick=()=>dlf(JSON.stringify(S,null,2),"deadreckoning-"+iso(nowd())+".json","application/json");
 E.eM.onclick=()=>{const st=stat();
-  let m="# 49 DAYS\n\n"+st.d+"/"+st.a+" complete ("+st.p+"%)\n\n";
+  let m="# DEAD RECKONING\n\n"+st.d+"/"+st.a+" complete ("+st.p+"%)\n\n";
   S.tracks.forEach(t=>{m+="## "+t.name+"\n\n";
     t.tasks.forEach(x=>m+="- ["+(x.done?"x":" ")+"] "+x.text+" - "+(x.due||"undated")+"\n");
     if(t.notes)m+="\n> "+t.notes+"\n";m+="\n"});
   m+="## APPLICATIONS\n\n| Tier | University | Closes | Status | Priority |\n|---|---|---|---|---|\n";
   COLLEGES.forEach(c=>{const u=cof(c.id);
     m+="| "+c.tier+" | "+c.uni+" | "+c.closes+" | "+u.status+" | "+u.prio+" |\n"});
-  dlf(m,"49days.md","text/markdown")};
+  dlf(m,"deadreckoning.md","text/markdown")};
 E.iJ.onclick=()=>E.fi.click();
 E.fi.onchange=()=>{const f=E.fi.files[0];if(!f)return;const r=new FileReader();
   r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.tracks)throw 0;
@@ -687,7 +756,20 @@ E.fi.onchange=()=>{const f=E.fi.files[0];if(!f)return;const r=new FileReader();
 E.rs.onclick=()=>{if(!confirm("RESET EVERYTHING? ALL EDITS LOST."))return;
   S=SEED();note("RESET TO SEED");save();render();tab("work")};
 
+E.sy.onclick=async()=>{
+  const c=cfg();
+  const t=prompt("GITHUB TOKEN — fine-grained, Gists: read+write.\nStored on this device only.",c.token||"");
+  if(t===null)return;
+  const g=prompt("GIST ID — leave blank on the first device and one will be made for you.",c.gist||"");
+  if(g===null)return;
+  setCfg({token:t.trim(),gist:g.trim()});
+  if(!g.trim()){await makeGist()}else{await refresh()}
+};
+E.sn.onclick=()=>refresh();
+
 clock();render();tab(S.tab||"work");
+refresh();
+window.addEventListener("focus",refresh);
 setInterval(clock,1000);
 setInterval(head,300000);
 </script>
